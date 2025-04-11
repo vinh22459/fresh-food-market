@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Điện Thoại</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Cửa Hàng Điện Thoại</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#" onclick="showCart()">Giỏ Hàng</a></li>
+                <li><a href="#" onclick="showContact()">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chạy chữ sản phẩm -->
+        <section id="product-marquee">
+            <h2>Thông Tin Sản Phẩm</h2>
+            <div class="marquee">
+                <p>iPhone 13 - 12.000.000 VND | Samsung S21 - 18.000.000 VND | Xiaomi Mi 11 - 11.000.000 VND | OnePlus 9 - 10.000.000 VND</p>
+            </div>
+        </section>
+
+        <!-- Danh sách sản phẩm -->
+        <section id="products">
+            <h2>Các Sản Phẩm Điện Thoại Mới Nhất</h2>
+            <div class="product-list">
+                <div class="product-item" onclick="showDetails('iphone13')">
+                    <img src="iphone13.jpg" alt="iPhone 13">
+                    <h3>iPhone 13</h3>
+                    <p class="price">12.000.000 VND</p>
+                </div>
+                <div class="product-item" onclick="showDetails('galaxyS21')">
+                    <img src="galaxys21.jpg" alt="Samsung Galaxy S21">
+                    <h3>Samsung Galaxy S21</h3>
+                    <p class="price">18.000.000 VND</p>
+                </div>
+                <div class="product-item" onclick="showDetails('xiaomiMi11')">
+                    <img src="xiaomi11.jpg" alt="Xiaomi Mi 11">
+                    <h3>Xiaomi Mi 11</h3>
+                    <p class="price">11.000.000 VND</p>
+                </div>
+                <div class="product-item" onclick="showDetails('onePlus9')">
+                    <img src="oneplus9.jpg" alt="OnePlus 9">
+                    <h3>OnePlus 9</h3>
+                    <p class="price">10.000.000 VND</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chi tiết sản phẩm -->
+        <section id="product-details" class="hidden">
+            <button class="close-btn" onclick="closeDetails()">❌ Đóng</button>
+            <div id="details-content"></div>
+        </section>
+
+        <!-- Giỏ hàng -->
+        <section id="cart" class="hidden">
+            <h2>Giỏ Hàng</h2>
+            <p>Giỏ hàng hiện tại của bạn không có sản phẩm nào.</p>
+            <button class="close-btn" onclick="closeCart()">❌ Đóng</button>
+        </section>
+
+        <!-- Liên hệ -->
+        <section id="contact" class="hidden">
+            <h2>Liên Hệ</h2>
+            <p>📍 Địa chỉ: 123 Đường ABC, TP. HCM</p>
+            <p>📧 Email: lienhe@cuahang.com</p>
+            <p>📞 Số điện thoại: 0909-123-456</p>
+            <button class="close-btn" onclick="closeContact()">❌ Đóng</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Cửa hàng điện thoại top 1 Việt Nam</p>
+    </footer>
+
+</body>
+</html>
